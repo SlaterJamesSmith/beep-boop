@@ -3,22 +3,21 @@ $(document).ready(function() {
     event.preventDefault();
 
 
-var firstInput = parseInt($("input#number").val());
-var inputs = 4
+var userInput = parseInt($("input#number").val());
 
 var newInputs = []
-	// newInputs.forEach(function(newInput) {
-  // if (newInputs[0] === firstInput - 1) {newInputs.unshift(firstInput)
-  // } else {
-  // newInputs.unshift(newInput[newInput] + 1)
-  // }})
-
-  for (i = 0; i < firstInput + 1; i +=1) {
-    newInputs.push(firstInput - (firstInput - i))
+  for (i = 0; i < userInput + 1; i +=1) {
+    newInputs.push(userInput - (userInput - i))
   }
+var rmvThrees = []
+  newInputs.forEach(function(newInput) {
+    if (String(newInput).includes("3")) {
+      rmvThrees.push("sorry Dave")
+    } else {
+      rmvThrees.push(newInput)
+    }
+  });
 
-console.log(newInputs)
-
-alert(newInputs)
+console.log(rmvThrees)
 });
 });
