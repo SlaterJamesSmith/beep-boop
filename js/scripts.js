@@ -12,7 +12,7 @@ var newInputs = []
 var rmvThrees = []
   newInputs.forEach(function(newInput) {
     if (String(newInput).includes("3")) {
-      rmvThrees.push("sorry Dave")
+      rmvThrees.push("I'm sorry Dave. I'm afrain I can't do that.")
     } else {
       rmvThrees.push(newInput)
     }
@@ -25,7 +25,17 @@ var rmvThrees = []
         rmvTwos.push(rmvThree)
       }
     });
+    var rmvOnes = []
+      rmvTwos.forEach(function(rmvTwo) {
+        if (String(rmvTwo).includes("1")) {
+          rmvOnes.push("Beep!")
+        } else {
+          rmvOnes.push(rmvTwo)
+        }
+      });
 
-console.log(rmvTwos)
+      $("#result").text(rmvOnes.join(", "))
+
+console.log(rmvOnes)
 });
 });
