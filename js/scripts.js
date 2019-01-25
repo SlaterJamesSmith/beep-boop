@@ -17,7 +17,15 @@ var rmvThrees = []
       rmvThrees.push(newInput)
     }
   });
+  var rmvTwos = []
+    rmvThrees.forEach(function(rmvThree) {
+      if (String(rmvThree).includes("2")) {
+        rmvTwos.push("Boop")
+      } else {
+        rmvTwos.push(rmvThree)
+      }
+    });
 
-console.log(rmvThrees)
+console.log(rmvTwos)
 });
 });
