@@ -6,7 +6,7 @@
 
 ## Description
 
-_A simple form that will return a numbered list from zero to another number input by the user, the catch being that all numbers with digits containing 1, 2, or 3 will appear within the returned list as one of three non-numerical values instead of a number. Those values will appear as the message "Beep!", "Boop", or "I'm sorry, Dave. I'm afraid I can't do that."_
+_A simple form that will return a numbered list from zero to any positive number input by the user, the catch being that all numbers with digits containing 1, 2, or 3 will appear within the returned list as one of three non-numerical. Those values will appear within the list as the message "Beep!", "Boop", or "I'm sorry, Dave. I'm afraid I can't do that."_
 
 #### Program behavior specifications:
 * _The program will return a range of numbers from 0 to the user's inputted number._
@@ -17,11 +17,11 @@ _A simple form that will return a numbered list from zero to another number inpu
 
 ## Setup/Installation Requirements
 
-* _Clone from_ https://github.com/SlaterJamesSmith/epicodus-survey _or visit_ https://slaterjamessmith.github.io/epicodus-survey
+* _Clone from_ https://github.com/SlaterJamesSmith/beep-bop _or visit_ https://slaterjamessmith.github.io/beep-boop
 * _Open in preferred web browser_
-
-
-
+* _Enter a number into form and click "Submit"_
+* _Observe results_
+* _Repeat process if desired_
 
 ## Known Bugs
 

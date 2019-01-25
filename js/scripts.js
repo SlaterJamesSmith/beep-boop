@@ -1,12 +1,8 @@
 $(document).ready(function() {
   $("form#beep-boop").submit(function(event) {
     event.preventDefault();
-
-
-var userInput = parseInt($("input#number").val());
-
+  var userInput = parseInt($("input#number").val());
   if (userInput >= 1) {
-
   var newInputs = []
     for (i = 0; i < userInput + 1; i +=1) {
       newInputs.push(userInput - (userInput - i))
@@ -27,23 +23,20 @@ var userInput = parseInt($("input#number").val());
           rmvTwos.push(rmvThree)
         }
       });
-      var rmvOnes = []
-        rmvTwos.forEach(function(rmvTwo) {
-          if (String(rmvTwo).includes("1")) {
-            rmvOnes.push("Beep!")
-          } else {
-            rmvOnes.push(rmvTwo)
-          }
-        });
-
-        $("#result").text(rmvOnes.join(", "))
-        $("#error").hide();
-        $("#result").show();
-    } else {
-      $("#error").show();
-      $("#result").hide();
-    }
-
-console.log(rmvOnes)
+    var rmvOnes = []
+      rmvTwos.forEach(function(rmvTwo) {
+        if (String(rmvTwo).includes("1")) {
+          rmvOnes.push("Beep!")
+        } else {
+          rmvOnes.push(rmvTwo)
+        }
+      });
+      $("#result").text(rmvOnes.join(", "))
+      $("#error").hide();
+      $("#result").show();
+  } else {
+    $("#error").show();
+    $("#result").hide();
+  }
 });
 });
