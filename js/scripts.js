@@ -1,4 +1,9 @@
-var firstInput = 4
+$(document).ready(function() {
+  $("form#beep-boop").submit(function(event) {
+    event.preventDefault();
+
+
+var firstInput = parseInt($("input#number").val());
 var inputs = 4
 
 var newInputs = []
@@ -15,11 +20,5 @@ var newInputs = []
 console.log(newInputs)
 
 alert(newInputs)
-
-var numbers = []
-	inputs.forEach(function(input) {
-  numbers.push(input-=1)
-
-
-  });
-  
+});
+});
