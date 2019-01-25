@@ -6,7 +6,7 @@
 
 ## Description
 
-_A simple form that will return a numbered list from zero to any positive number input by the user, the catch being that all numbers with digits containing 1, 2, or 3 will appear within the returned list as one of three non-numerical. Those values will appear within the list as the message "Beep!", "Boop", or "I'm sorry, Dave. I'm afraid I can't do that."_
+_A simple form that will return a numbered list from zero to any positive number input by the user, the catch being that all numbers with digits containing 1, 2, or 3 will appear within the returned list as one of three non-numerical values. Those values will appear within the list as the message "Beep!", "Boop", or "I'm sorry, Dave. I'm afraid I can't do that."_
 
 #### Program behavior specifications:
 * _The program will return a range of numbers from 0 to the user's inputted number._
