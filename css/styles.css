@@ -1,3 +1,15 @@
 #error {
   display: none;
 }
+
+#green {
+  color: green;
+}
+
+#orange {
+  color: orange;
+}
+
+#red {
+  color: red;
+}
