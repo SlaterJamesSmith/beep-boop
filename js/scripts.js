@@ -38,5 +38,19 @@ $(document).ready(function() {
     $("#error").show();
     $("#result").hide();
   }
-});
-});
+  
+  // There's likely a way to dry up code below, probably using a forEach loop, but I did not have time to do so before project deadline. (code written for further exploration, regular expression initial code found in online forum.)
+    var oldBeep = 'Beep!';
+    var newBeep = '<span id=green>Beep!</span>';
+    var greenBeep = $('#result').text().replace(RegExp(oldBeep,"gi"),newBeep);
+      $('#result').html(greenBeep);
+    var oldBoop = 'Boop';
+    var newBoop = '<span id=orange>Boop</span>';
+    var orangeBoop = greenBeep.replace(RegExp(oldBoop,"gi"),newBoop);
+      $('#result').html(orangeBoop);
+    var oldSry = "I'm sorry Dave. I'm afraid I can't do that.";
+    var newSry = "<span id=red>I'm sorry Dave. I'm afraid I can't do that.</span>";
+    var redSry = orangeBoop.replace(RegExp(oldSry,"gi"),newSry);
+      $('#result').html(redSry);
+  });
+  });
