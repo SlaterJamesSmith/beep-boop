@@ -1,44 +1,57 @@
+function BeepBoop(userInput) {
+var newInputs = []
+  for (i = 0; i < userInput + 1; i +=1) {
+    newInputs.push(userInput - (userInput - i))
+  }
+var rmvThrees = []
+  newInputs.forEach(function(newInput) {
+    if (String(newInput).includes("3")) {
+      rmvThrees.push("I'm sorry Dave. I'm afraid I can't do that.")
+    } else {
+      rmvThrees.push(newInput)
+    }
+  });
+  var rmvTwos = []
+    rmvThrees.forEach(function(rmvThree) {
+      if (String(rmvThree).includes("2")) {
+        rmvTwos.push("Boop")
+      } else {
+        rmvTwos.push(rmvThree)
+      }
+    });
+  var rmvOnes = []
+    rmvTwos.forEach(function(rmvTwo) {
+      if (String(rmvTwo).includes("1")) {
+        rmvOnes.push("Beep!")
+      } else {
+        rmvOnes.push(rmvTwo)
+      }
+
+  });
+  return rmvOnes
+}
+
+
+
+
+
+
 $(document).ready(function() {
   $("form#beep-boop").submit(function(event) {
     event.preventDefault();
   var userInput = parseInt($("input#number").val());
+  var result;
   if (userInput >= 1) {
-  var newInputs = []
-    for (i = 0; i < userInput + 1; i +=1) {
-      newInputs.push(userInput - (userInput - i))
-    }
-  var rmvThrees = []
-    newInputs.forEach(function(newInput) {
-      if (String(newInput).includes("3")) {
-        rmvThrees.push("I'm sorry Dave. I'm afraid I can't do that.")
-      } else {
-        rmvThrees.push(newInput)
-      }
-    });
-    var rmvTwos = []
-      rmvThrees.forEach(function(rmvThree) {
-        if (String(rmvThree).includes("2")) {
-          rmvTwos.push("Boop")
-        } else {
-          rmvTwos.push(rmvThree)
-        }
-      });
-    var rmvOnes = []
-      rmvTwos.forEach(function(rmvTwo) {
-        if (String(rmvTwo).includes("1")) {
-          rmvOnes.push("Beep!")
-        } else {
-          rmvOnes.push(rmvTwo)
-        }
-      });
-      $("#result").text(rmvOnes.join(", "))
+      result = BeepBoop(userInput)
+      console.log(BeepBoop(userInput));
+      $("#result").text(result.join(", "))
       $("#error").hide();
       $("#result").show();
   } else {
     $("#error").show();
     $("#result").hide();
   }
-  
+
   // There's likely a way to dry up code below, probably using a forEach loop, but I did not have time to do so before project deadline. (code written for further exploration, regular expression initial code found in online forum.)
     var oldBeep = 'Beep!';
     var newBeep = '<span id=green>Beep!</span>';
