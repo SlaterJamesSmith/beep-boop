@@ -43,6 +43,7 @@ $(document).ready(function() {
     $("#error").show();
     $("#result").hide();
   }
+
   // There's likely a way to dry up code below, probably using a forEach loop, but I did not have time to do so before project deadline. (code written for further exploration, regular expression initial code found in online forum.)
     var oldBeep = 'Beep!';
     var newBeep = '<span id=green>Beep!</span>';
