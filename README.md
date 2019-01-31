@@ -17,7 +17,7 @@ _A simple form that will return a numbered list from zero to any positive number
 
 ## Setup/Installation Requirements
 
-* _Clone from_ https://github.com/SlaterJamesSmith/beep-bop _or visit_ https://slaterjamessmith.github.io/beep-boop
+* _Clone from_ https://github.com/SlaterJamesSmith/beep-boop _or visit_ https://slaterjamessmith.github.io/beep-boop
 * _Open in preferred web browser_
 * _Enter a number into form and click "Submit"_
 * _Observe results_
